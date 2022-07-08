@@ -1,0 +1,212 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, right top, from(skyblue), to(#f0cc96));
+  background: linear-gradient(90deg, skyblue, #f0cc96);
+}
+
+header {
+  height: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*垂直置中*/
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*水平置中*/
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header h1 {
+  color: #38484e;
+  font-size: 3rem;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*45~55行為消除form內type=number的上下箭頭*/
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
+}
+
+form input,
+form button {
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 25px;
+  padding: 0.25rem 0.25rem;
+  margin: 0 0.2rem;
+}
+
+form input[type="number"] {
+  width: 50px;
+  text-align: center;
+}
+
+form input::-webkit-outer-spin-button,
+form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+form input[type=number] {
+  -moz-appearance: textfield;
+}
+
+form button {
+  /*cursor屬性可以指定當滑鼠指標指向哪個物件時，顯示不同的游標*/
+  cursor: pointer;
+  background-color: rgba(157, 199, 141, 0.5);
+  color: #fefefe;
+}
+
+div.sort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem;
+}
+
+div.sort button {
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: rgba(157, 199, 141, 0.5);
+  color: #fefefe;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section div.todo {
+  width: 30vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 0.2rem 0;
+}
+
+section div.todo p {
+  background-color: aliceblue;
+  color: black;
+  font-size: 1.25rem;
+  padding: 0.5rem;
+}
+
+section div.todo p.todo-text {
+  text-align: center;
+  width: 50%;
+}
+
+section div.todo p.todo-time {
+  text-align: end;
+  width: 20%;
+}
+
+section div.todo button {
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+
+section div.todo button.complate {
+  background-color: rgba(158, 250, 122, 0.8);
+  /*避免js的events點擊button時會發生誤點到icon而無法觸發event，因此使用pointer-events使其無法成為event target*/
+}
+
+section div.todo button.complate i {
+  pointer-events: none;
+}
+
+section div.todo button.trash {
+  background-color: rgba(241, 112, 112, 0.8);
+}
+
+section div.todo button.trash i {
+  pointer-events: none;
+}
+
+.done {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  opacity: 0.3;
+  text-decoration: line-through;
+  text-decoration-thickness: 0.25rem;
+}
+
+/*透過@keyframes來設定動畫效果*/
+@-webkit-keyframes scaleUp {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scaleUp {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes scaleDown {
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes scaleDown {
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+/*# sourceMappingURL=style.css.map */

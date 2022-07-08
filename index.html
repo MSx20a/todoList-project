@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  <!--IE 相容性模式-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--讓頁面符合螢幕-->
+    <meta name="author" content="Alvin"> <!--網站的作者-->
+    <base target="_self">    <!--在框架內直接開啟連結-->
+    <meta name="description" content="">  <!--網頁內容的描述(至多150個字符)-->
+    <title>todo list</title>
+    <!--使用google font的字體-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400&family=Noto+Serif+TC&display=swap" rel="stylesheet">
+    <!--使用Font Awesome的icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" 
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Alvin Todo List</h1>
+    </header>
+    <form action="">
+        <input type="text">
+        <input type="number" min="1" max="12" placeholder="M" required>
+        <input type="number" min="1" max="31" placeholder="D" required>
+        <button type="submit">Add into List</button>
+    </form>
+    <div class="sort">
+        <button>Sort By Time</button>
+    </div>
+    <br>
+    <br>
+    <section></section>
+</body>
+<script src="./app.js"></script>
+</html>
